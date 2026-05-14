@@ -1,14 +1,16 @@
-function FacilityCard() {
+
+
+function FacilityCard({ id, name, type, district, services }) {
     return (
         <div className="card">
             <div className="card-top">
                 <span>🏥</span>
-                <h3>Kigali University Teaching Hospital</h3>
+                <h3>{name}</h3>
             </div>
             <div className="card-details">
-                <p><strong>Type:</strong> Hospital</p>
-                <p><strong>District:</strong> Gasabo</p>
-                <p><strong>Services:</strong> Emergency, Surgery, Maternity</p>
+                <p><strong>Type:</strong> {type}</p>
+                <p><strong>District:</strong> {district}</p>
+                <p><strong>Services:</strong> {services.join(",")}</p>
             </div>
         </div>
     )
